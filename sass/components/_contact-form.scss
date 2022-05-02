@@ -140,8 +140,6 @@
     justify-content: center;
     font-family: var(--primary-font-family);
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
     letter-spacing: 0.03em;
 
     color: var(--primary-text-color);
@@ -150,14 +148,31 @@
 .contact-form-checkbox-link {
     font-family: var(--primary-font-family);
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-
     letter-spacing: 0.03em;
 
     color: #2196f3;
 }
-
+@media screen and (max-width:1199px) {
+    .contact-form-checkbox-label {
+        font-size: 12px;
+        line-height: 1.17;
+    }
+    .contact-form-checkbox-link{
+        font-size: 12px;
+        line-height: 1.17;
+    }
+}
+@media screen and (min-width:1200px) {
+    .contact-form-checkbox-label {
+        font-size: 14px;
+        line-height: 1.71;
+    }
+    
+    .contact-form-checkbox-link {
+        font-size: 14px;
+        line-height: 1.71;
+    }
+}
 .checkbox-vector {
     display: block;
     width: 16px;

@@ -1,32 +1,3 @@
-.benefits-title {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-
-    color: var(--secondary-text-color);
-}
-
-.benefits-list {
-    display: flex;
-}
-
-.benefits-list-item {
-    width: 270px;
-
-    &:not(:last-child) {
-        margin-right: 30px;
-    }
-}
-
-.benefits-description {
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-
-    margin-top: 10px;
-}
 
 .benefits-icons-container {
     display: flex;
@@ -34,9 +5,86 @@
     align-items: center;
     margin-bottom: 30px;
 
-    height: 120px;
-    width: 270px;
-
     background: var(--secondary-background-color);
     border-radius: 4px;
 }
+.benefits-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--secondary-text-color);
+
+    margin-bottom: 10px;
+}
+.benefits-description {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    margin-top: 10px;
+}
+.benefits-list-item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+// only tablet
+@media screen and (min-width:768px) and (max-width:1199px) {
+    .benefits-list-item{
+        width: calc((100% - 30px) / 2);
+       
+    }
+    .benefits-list-item:nth-child(2n-1) {
+        margin-right: 30px;
+    }
+    
+    .benefits-list-item:not(:nth-last-child(-n+2)) {
+        margin-bottom: 30px;
+    }
+
+    .benefits-list{
+        margin: -15px;
+    }
+    
+    .benefits-icons-container{
+        width: 354px;
+        height: 120px;
+    }
+}
+// +768
+@media screen and (max-width:767px) {
+    .benefits-list-item{
+        width: 450px;
+    }
+    .benefits-icons-container {
+        width: 450px;
+        height: 120px;
+    }
+}
+// 768+
+@media screen and (min-width:768px) {
+    .benefits-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+// desktop
+@media screen and (min-width:1200px) {
+    .benefits-list-item {
+        width: 270px;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+    .benefits-icons-container {
+        height: 120px;
+        width: 270px;
+    }
+}
+
+
+
