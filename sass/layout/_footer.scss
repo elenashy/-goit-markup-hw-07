@@ -1,27 +1,18 @@
-.footer-container {
-    @include margin-auto;
-
-    display: flex;
-    align-items: baseline;
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    
-}
-
 .footer {
     background-color: var(--primary-background-color);
     padding-top: 60px;
     padding-bottom: 60px;
-    display: flex;
+}
+.footer-container{
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .logo-footer {
     display: inline-block;
     font-family: var(--secondary-font-family);
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+
     letter-spacing: 0.03em;
     color: var(--accent-color);
 
@@ -35,7 +26,6 @@
 .footer-contacts {
     width: 230px;
 }
-
 .footer-contacts-list__item:not(:last-child) {
     margin-bottom: 10px;
 }
@@ -87,22 +77,103 @@
         color: var(--accent-color);
     }
 }
-
 .join-container {
     height: 80px;
     width: 206px;
-    margin-left: 70px;
-}
 
+}
 .join-title {
     font-family: var(--primary-font-family);
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
 
     color: var(--primary-hero-text-color);
     margin-bottom: 20px;
 }
+
+
+@media screen and (max-width:1199px) {
+    .logo-footer{
+        font-size: 24px;
+        line-height: 1.16;
+    }
+    .footer-container {
+        text-align: center;
+    }
+    .join-title {
+        display: block;
+    }
+    
+}
+// only mobile
+@media screen and (max-width:767px) {
+   
+    .nav-container{
+        margin-bottom: 60px;
+    }
+    .footer-contacts {
+        @include margin-auto;
+    }
+    .footer-contacts-list__item:not(:last-child) {
+        margin-bottom: 8px;
+    }
+    
+    .join-container{
+        @include margin-auto;
+        margin-bottom: 60px;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1199px) {
+    .footer{
+        padding-right: 75px;
+        padding-left: 75px;
+    }
+    .footer-wrapper{
+        justify-content: space-between;
+        margin-bottom: 60px;
+    }
+    .footer-container{
+        display: block;
+    }
+    .nav-container{
+        margin-right: 165px;
+    }
+}
+// desktop+
+@media screen and (min-width:1200px) {
+    .footer-container {
+        @include margin-auto;
+
+        display: flex;
+        align-items: flex-start;
+        width: 1200px;
+        justify-content: space-between;
+
+    }
+    .logo-footer{
+        font-size: 26px;
+        line-height: 1.19;
+    }
+
+    .join-container{
+        margin-left: 70px;
+    }
+    .footer{
+        display: flex;
+    }
+    
+}
+// tablet+
+@media screen and (min-width:768px) {
+    .footer-wrapper {
+        display: flex;
+    }
+}
+
+
+
+
