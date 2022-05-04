@@ -59,6 +59,7 @@
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
+        z-index: 333;
 
         background-color: #fff;
 
@@ -83,6 +84,10 @@
     }
 
     .mobile-menu__container {
+        display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+        height: 100%;
         position: relative;
         padding: 48px 40px;
     }
@@ -103,13 +108,13 @@
         margin-bottom: 32px;
     }
 
-    .mobile-menu-nav-list {
-        margin-bottom: 302px;
-    }
+    // .mobile-menu-nav-list {
+    //     margin-bottom: 302px;
+    // }
 
-    .mobile-menu-contacts-list {
-        margin-bottom: 64px;
-    }
+    // .mobile-menu-contacts-list {
+    //     margin-bottom: 64px;
+    // }
 
     .mobile-menu-contacts-list__tel {
         font-family: var(--primary-font-family);
